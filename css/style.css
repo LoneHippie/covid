@@ -1,0 +1,319 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comfortaa";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: linear-gradient(
+        rgb(0, 0, 0),
+        rgb(63, 14, 14));
+    z-index: -5;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to left bottom,
+            rgba(213, 111, 125, 0.5),
+            rgba(180, 40, 40, 0.9)),
+            url(../img/coronavirus-background.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.header-box {
+    position: relative;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    backface-visibility: hidden;
+    width: 100vw;
+}
+
+.header-text {
+    color: #fff;
+}
+
+.header-text-main {
+    display: block;
+    font-size: 4rem;
+    letter-spacing: 10px;
+    position: relative;
+
+    animation: slideRight 1700ms;
+}
+
+.header-text-sub {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    position: relative;
+
+    animation: slideLeft 2000ms ease-out;
+}
+
+.btn-header {
+    font-family: "Comfortaa";
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    
+    position: relative;
+
+    background: linear-gradient(
+        rgba(213, 111, 125, 0.336),
+        rgba(128, 14, 14, 0.9));
+    transition: all 200ms;
+}
+
+.btn-header {
+    animation: buttonRise 1500ms;
+}
+.btn-header:hover {
+    transition: all 200ms;
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0px 20px 20px rgba(0,0,0,.2);
+}
+.btn-header:active {
+    transform: translateY(-1px);
+    box-shadow: 0px 8px 10px rgba(0,0,0,.2);
+}
+.btn-header:focus {
+    outline: 0;
+}
+
+.table-background {
+    display: block;
+}
+
+.table-box {
+    display: block;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 5rem;
+}
+
+.table-title {
+    color: #fff;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.table-disc {
+    font-size: 1.2rem;
+}
+
+.add-info-lethality .add-info-lethality-text {
+    visibility: hidden;
+    font-size: 10px;
+    width: 160px;
+    background: linear-gradient(
+        rgba(213, 111, 125, 0.11),
+        rgba(128, 14, 14, 0.377));
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    transform: translateY(-70px);
+    z-index: 1;
+}
+.add-info-lethality:hover .add-info-lethality-text {
+    visibility: visible;
+}
+
+.table {
+    color: #fff;
+    margin: auto;
+}
+
+table.covidTable {
+    border: 3px solid rgba(187, 40, 40, 0.507);
+    border-radius: 15px;
+    background: linear-gradient(
+        rgba(82, 9, 18, 0.575),
+        rgba(194, 21, 21, 0.411)),
+    url(../img/covid_single.jpg);
+    background-size: cover;
+    text-align: center;
+  }
+  table.covidTable td, table.covidTable th {
+    border-bottom: 1px solid rgba(187, 40, 40, 0.507);
+    padding: 5px 10px;
+    text-align: left;
+  }
+  table.covidTable tbody td {
+    font-size: 1.1rem;
+  }
+  table.covidTable thead {
+    background: rgba(221, 221, 221, 0);
+  }
+  table.covidTable thead th {
+    font-size: 1.25rem;
+  }
+  table.covidTable tfoot td {
+    font-size: 1.1rem;
+    border: none;
+  }
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes buttonRise {
+    0% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .table-box {
+        margin-left: 3rem;
+    }
+
+}
+
+@media screen and (max-width: 735px) {
+    .table-box {
+        margin-left: 2.4rem;
+    }
+    .add-info-lethality .add-info-lethality-text {
+        font-size: 8.5px;
+        padding: 4.5px 0;
+    
+        /* Position the tooltip */
+        position: absolute;
+        transform: translate(-7rem, -3.5rem);
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header {
+        height: 75vh;
+    }
+
+    .header-text-main {
+        font-size: 2.5rem;
+    }
+    .header-text-sub {
+        font-size: 1.5rem;
+    }
+
+    .table-box {
+        margin-left: 0;
+    }
+
+    .table-title {
+        font-size: 1.2rem;
+    }
+
+    table.covidTable td, table.covidTable th {
+        padding: 2px 4.5px;
+    }
+
+    table.covidTable tbody td {
+        font-size: 0.8rem;
+    }
+    table.covidTable thead th {
+        font-size: 0.8rem;
+    }
+    table.covidTable tfoot td {
+        font-size: 0.8rem;
+    }
+
+    .table-disc {
+        font-size: 0.75rem;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header-text-main {
+        font-size: 2.2rem;
+    }
+    .header-text-sub {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+    }
+    .table-title {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    table.covidTable tbody td {
+        font-size: 0.7rem;
+    }
+    table.covidTable thead th {
+        font-size: 0.7rem;
+    }
+    table.covidTable tfoot td {
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Corona API</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-box">
+            <h1 class="header-text">
+                <span class="header-text-main">COVID&ndash;19</span>
+                <span class="header-text-sub">Current info and statistics</span>
+            </h1>
+
+            <button class="btn-header" id="btn-scroll">Go to info</button>
+
+        </div>
+
+    </header>
+
+    <section class="table-background">
+        <div class="table-box">
+            <h2 class="table-title">
+                Current global stats
+            </h2>
+            
+            <div class="table">
+                <table class="covidTable">
+                    <div class="table-disc">Last updated: <span id="disc-date">fill</span></div>
+                    <thead>
+                    <tr>
+                    <th>Country</th>
+                    <th>Total Infected</th>
+                    <th>Total Deaths</th>
+                    <th class="add-info-lethality">Lethality&#42;
+                        <span class="add-info-lethality-text">Data may be inaccurate due to under reporting of cases per country</span>
+                    </th>
+                    <th>Active Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="country-1">cell1_1</td>
+                        <td id="cases-1">cell2_1</td>
+                        <td id="deaths-1">cell3_1</td>
+                        <td id="lethality-1">cell4_1</td>
+                        <td id="days-since-1">cell5_1</td>
+                    </tr>
+                    <tr>
+                        <td id="country-2">cell1_2</td>
+                        <td id="cases-2">cell2_2</td>
+                        <td id="deaths-2">cell3_2</td>
+                        <td id="lethality-2">cell4_2</td>
+                        <td id="days-since-2">cell5_2</td>
+                    </tr>
+                    <tr>
+                        <td id="country-3">cell1_3</td>
+                        <td id="cases-3">cell2_3</td>
+                        <td id="deaths-3">cell3_3</td>
+                        <td id="lethality-3">cell4_3</td>
+                        <td id="days-since-3">cell5_3</td>
+                    </tr>
+                    <tr>
+                        <td id="country-4">cell1_4</td>
+                        <td id="cases-4">cell2_4</td>
+                        <td id="deaths-4">cell3_4</td>
+                        <td id="lethality-4">cell4_4</td>
+                        <td id="days-since-4">cell5_4</td>
+                    </tr>
+                    <tr>
+                        <td id="country-5">cell1_5</td>
+                        <td id="cases-5">cell2_5</td>
+                        <td id="deaths-5">cell3_5</td>
+                        <td id="lethality-5">cell4_5</td>
+                        <td id="days-since-5">cell5_5</td>
+                    </tr>
+                    <tr>
+                        <td id="country-6">cell1_6</td>
+                        <td id="cases-6">cell2_6</td>
+                        <td id="deaths-6">cell3_6</td>
+                        <td id="lethality-6">cell4_6</td>
+                        <td id="days-since-6">cell5_6</td>
+                    </tr>
+                    <tr>
+                        <td id="country-7">cell1_7</td>
+                        <td id="cases-7">cell2_7</td>
+                        <td id="deaths-7">cell3_7</td>
+                        <td id="lethality-7">cell4_7</td>
+                        <td id="days-since-7">cell5_7</td>
+                    </tr>
+                    <tr>
+                        <td id="country-8">cell1_8</td>
+                        <td id="cases-8">cell2_8</td>
+                        <td id="deaths-8">cell3_8</td>
+                        <td id="lethality-8">cell4_8</td>
+                        <td id="days-since-8">cell5_8</td>
+                    </tr>
+                    <tr>
+                        <td id="country-9">cell1_9</td>
+                        <td id="cases-9">cell2_9</td>
+                        <td id="deaths-9">cell3_9</td>
+                        <td id="lethality-9">cell4_9</td>
+                        <td id="days-since-9">cell5_9</td>
+                    </tr>
+                    <tr>
+                        <td id="country-10">cell1_10</td>
+                        <td id="cases-10">cell2_10</td>
+                        <td id="deaths-10">cell3_10</td>
+                        <td id="lethality-10">cell4_10</td>
+                        <td id="days-since-10">cell5_10</td>
+                    </tr>
+                    <tr>
+                        <td id="country-11">cell1_11</td>
+                        <td id="cases-11">cell2_11</td>
+                        <td id="deaths-11">cell3_11</td>
+                        <td id="lethality-11">cell4_11</td>
+                        <td id="days-since-11">cell5_11</td>
+                    </tr>
+                    <tr>
+                        <td id="country-12">cell1_12</td>
+                        <td id="cases-12">cell2_12</td>
+                        <td id="deaths-12">cell3_12</td>
+                        <td id="lethality-12">cell4_12</td>
+                        <td id="days-since-12">cell5_12</td>
+                    </tr>
+                    <tr>
+                        <td id="country-13">cell1_13</td>
+                        <td id="cases-13">cell2_13</td>
+                        <td id="deaths-13">cell3_13</td>
+                        <td id="lethality-13">cell4_13</td>
+                        <td id="days-since-13">cell5_13</td>
+                    </tr>
+                    <tr>
+                        <td id="country-14">cell1_14</td>
+                        <td id="cases-14">cell2_14</td>
+                        <td id="deaths-14">cell3_14</td>
+                        <td id="lethality-14">cell4_14</td>
+                        <td id="days-since-14">cell5_14</td>
+                    </tr>
+                    <tr>
+                        <td id="country-15">cell1_15</td>
+                        <td id="cases-15">cell2_15</td>
+                        <td id="deaths-15">cell3_15</td>
+                        <td id="lethality-15">cell4_15</td>
+                        <td id="days-since-15">cell5_15</td>
+                    </tr>
+                    <tr>
+                        <td id="country-16">cell1_16</td>
+                        <td id="cases-16">cell2_16</td>
+                        <td id="deaths-16">cell3_16</td>
+                        <td id="lethality-16">cell4_16</td>
+                        <td id="days-since-16">cell5_16</td>
+                    </tr>
+                    <tr>
+                        <td id="country-17">cell1_17</td>
+                        <td id="cases-17">cell2_17</td>
+                        <td id="deaths-17">cell3_17</td>
+                        <td id="lethality-17">cell4_17</td>
+                        <td id="days-since-17">cell5_17</td>
+                    </tr>
+                    <tr>
+                        <td id="country-18">cell1_18</td>
+                        <td id="cases-18">cell2_18</td>
+                        <td id="deaths-18">cell3_18</td>
+                        <td id="lethality-18">cell4_18</td>
+                        <td id="days-since-18">cell5_18</td>
+                    </tr>
+                    <tr>
+                        <td id="country-19">cell1_19</td>
+                        <td id="cases-19">cell2_19</td>
+                        <td id="deaths-19">cell3_19</td>
+                        <td id="lethality-19">cell4_19</td>
+                        <td id="days-since-19">cell5_19</td>
+                    </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                        <td>Global</td>
+                        <td>gcell_1</td>
+                        <td>gcell_2</td>
+                        <td>gcell_3</td>
+                        <td>gcell_4</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script src="script.js"></script>
+</html>
